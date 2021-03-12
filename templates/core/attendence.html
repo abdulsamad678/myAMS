@@ -1,0 +1,80 @@
+{% extends 'core/main.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+
+		
+			
+			<table class="table table-sm">
+				<tr>
+				<th></th>
+				<th><form action = "" method= "POST"></th>
+                 {% csrf_token %}
+				 {{form.as_p}}
+				 <input type = "submit" class=  "btn btn-success" value= "Mark Attendence">
+
+                
+              
+				</form>
+			
+
+                 
+		
+					<h5>ATTENDENCE</h5>
+				</div>
+				
+				
+						<tr>
+							<th>ID</th>
+							<th>NAME</th>
+							<th>EMAL</th>
+                            <th>PASSWORD</th>
+							<th>date_created</th>
+							<th>status</th>
+
+						</tr>
+						{% for i in stu %}
+			            <tr>
+			            <th>{{ i.id }}</th>
+			            <th>{{i.name }}</th>
+			            <th>{{i.email }}</th>
+			            <th>{{i.password }}</th>
+			            <th>{{i.date_created }}</th>
+			            <th>{{ i.status }}</th>
+						</tr>
+						
+						{% endfor %}
+                        
+                        
+
+                       
+                        
+						
+					</table>
+				</div>
+			</div>
+			
+		</div>
+
+
+
+ {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
